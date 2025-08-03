@@ -62,3 +62,7 @@ Endpoints:
 /addMoney
 /transferMoney
 /healthz
+
+🧑‍💻 Author
+Bhojraj Patil
+GitHub: @Bhojrockzzz
