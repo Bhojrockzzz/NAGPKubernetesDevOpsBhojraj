@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-api
+  labels:
+    app: bank-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bank-api
+  template:
+    metadata:
+      labels:
+        app: bank-api
+    spec:
+      containers:
+        - name: bank-api
+          image: gcr.io/banking-k8s-467906/bank-api:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: bank-db
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_PASSWORD
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_DB
