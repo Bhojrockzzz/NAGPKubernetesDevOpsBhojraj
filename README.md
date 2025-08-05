@@ -112,6 +112,113 @@ Once deployed:
      ```bash
      kubectl port-forward svc/bank-api-service 3000:3000
      ```
+## Postman Collection:
+  [Bank API.postman_collection.json](https://github.com/user-attachments/files/21606719/Bank.API.postman_collection.json)
+{
+	"info": {
+		"_postman_id": "eed7e46a-4123-4a45-a2ca-e9a7e45b68fc",
+		"name": "Bank API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17060710"
+	},
+	"item": [
+		{
+			"name": "/healthz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bankURL}}/healthz",
+					"host": [
+						"{{bankURL}}"
+					],
+					"path": [
+						"healthz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET accountBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bankURL}}/accountBalance/2",
+					"host": [
+						"{{bankURL}}"
+					],
+					"path": [
+						"accountBalance",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /addMoney",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"amount\": 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bankURL}}/addMoney",
+					"host": [
+						"{{bankURL}}"
+					],
+					"path": [
+						"addMoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /transferMoney",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromId\": 1,\r\n    \"toId\": 2,\r\n    \"amount\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bankURL}}/transferMoney",
+					"host": [
+						"{{bankURL}}"
+					],
+					"path": [
+						"transferMoney"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "bankURL",
+			"value": "http://34.107.154.200",
+			"type": "default"
+		}
+	]
+}
+
 
 🧑‍💻 Author
 Bhojraj Patil
