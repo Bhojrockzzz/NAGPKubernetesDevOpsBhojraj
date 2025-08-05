@@ -55,16 +55,16 @@ Once deployed:
     gcloud container clusters create banking-cluster --region=asia-south1
     gcloud container clusters get-credentials banking-cluster --region=asia-south1
 4. **Buil and Push 'bank-api' docker image to your container registry Docker Hub or GCR:**:
-  ## GCR
-  # From project root (where Dockerfile exists)
+  # GCR
+  **From project root (where Dockerfile exists)**
     docker build -t gcr.io/banking-k8s-467906/bank-api:latest .
     Replace <banking-k8s-467906> with <your-project-id>
-  # Authenticate with GCP (only first time)
+  **Authenticate with GCP (only first time)**
     gcloud auth configure-docker
-  # Push image to Google Container Registry
+  **Push image to Google Container Registry**
     docker push gcr.io/banking-k8s-467906/bank-api:latest
     Replace <banking-k8s-467906> with actual GCP project ID
-  ## Docker Hub
+  # Docker Hub
     docker build -t <your-dockerhub-username>/bank-api:latest .
     docker push <your-dockerhub-username>/bank-api:latest
 
