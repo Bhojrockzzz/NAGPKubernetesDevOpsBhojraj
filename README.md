@@ -52,21 +52,26 @@ Once deployed:
     gcloud auth login
     gcloud config set project banking-k8s-467906
 3. **Create & connect to your GKE cluster:**:
+    ```bash
     gcloud container clusters create banking-cluster --region=asia-south1
     gcloud container clusters get-credentials banking-cluster --region=asia-south1
 4. **Buil and Push 'bank-api' docker image to your container registry Docker Hub or GCR:**:
-  **GCR :**
-  **From project root (where Dockerfile exists)**
-    docker build -t gcr.io/banking-k8s-467906/bank-api:latest .
-    Replace <banking-k8s-467906> with <your-project-id>
-  **Authenticate with GCP (only first time)**
-    gcloud auth configure-docker
-  **Push image to Google Container Registry**
-    docker push gcr.io/banking-k8s-467906/bank-api:latest
-    Replace <banking-k8s-467906> with actual GCP project ID
-  **Docker Hub :**
-    docker build -t <your-dockerhub-username>/bank-api:latest .
-    docker push <your-dockerhub-username>/bank-api:latest
+    **GCR :**
+      **From project root (where Dockerfile exists)**
+        ```bash
+        docker build -t gcr.io/banking-k8s-467906/bank-api:latest .
+        Replace <banking-k8s-467906> with <your-project-id>
+      **Authenticate with GCP (only first time)**
+        ```bash
+        gcloud auth configure-docker
+      **Push image to Google Container Registry**
+        ```bash
+        docker push gcr.io/banking-k8s-467906/bank-api:latest
+        Replace <banking-k8s-467906> with actual GCP project ID
+    **Docker Hub :**
+        ```bash
+        docker build -t <your-dockerhub-username>/bank-api:latest .
+        docker push <your-dockerhub-username>/bank-api:latest
 5. **Deploy your Kubernetes resources:**:
     cd k8s/
     kubectl apply -f .
