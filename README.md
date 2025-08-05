@@ -116,8 +116,10 @@ Once deployed:
     [Bank API.postman_collection.json](https://github.com/user-attachments/files/21606719/Bank.API.postman_collection.json)
   
 
+## Github link:
+    https://github.com/Bhojrockzzz/NAGPKubernetesDevOpsBhojraj
 
 
 ## 🧑‍💻 Author : 
   **Bhojraj Patil**
-  > GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)
+  > GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz/NAGPKubernetesDevOpsBhojraj)
