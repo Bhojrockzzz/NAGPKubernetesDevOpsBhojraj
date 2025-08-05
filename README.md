@@ -120,4 +120,4 @@ Once deployed:
 
 ## 🧑‍💻 Author : 
   **Bhojraj Patil**
-  GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)**
+  > GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)
