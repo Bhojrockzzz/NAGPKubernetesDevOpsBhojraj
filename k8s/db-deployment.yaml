@@ -33,11 +33,18 @@ spec:
                 secretKeyRef:
                   name: postgres-secret
                   key: POSTGRES_DB
+            - name: PGDATA                          
+              value: /var/lib/postgresql/data/pgdata
           volumeMounts:
             - name: db-init-script
               mountPath: /docker-entrypoint-initdb.d
               readOnly: true
+            - name: postgres-data
+              mountPath: /var/lib/postgresql/data   
       volumes:
         - name: db-init-script
           configMap:
             name: db-init
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: postgres-pvc
