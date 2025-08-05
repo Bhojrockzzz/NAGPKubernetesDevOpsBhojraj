@@ -71,16 +71,11 @@ app.post('/transferMoney', async (req, res) => {
 
 // Health check endpoint
 app.get('/healthz', (req, res) => {
-  res.status(200).send('OK');
-});
-
-
-app.get('/account', (req, res) => {
-  res.send("Bank Services are up and running.");
+  res.status(200).send('Bank Services are up and running.');
 });
 
 app.get('/', (req, res) => {
-  res.send("Account Service is up and running.");
+  res.send("Bank Services are up and running.");
 });
 
 const PORT = process.env.PORT || 3000;

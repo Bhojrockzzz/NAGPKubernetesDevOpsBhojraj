@@ -14,38 +14,31 @@ spec:
   rules:
   - http:
       paths:
-      - path: /account
-        pathType: Prefix
-        backend:
-          service:
-            name: account-svc
-            port:
-              number: 80
-      - path: /healthz
-        pathType: Prefix
-        backend:
-          service:
-            name: account-svc
-            port:
-              number: 80
-      - path: /accountBalance
-        pathType: Prefix
-        backend:
-          service:
-            name: bank-api
-            port:
-              number: 3000
-      - path: /addMoney
-        pathType: Prefix
-        backend:
-          service:
-            name: bank-api
-            port:
-              number: 3000
-      - path: /transferMoney
-        pathType: Prefix
-        backend:
-          service:
-            name: bank-api
-            port:
-              number: 3000
+        - path: /healthz
+          pathType: Prefix
+          backend:
+            service:
+              name: bank-api
+              port:
+                number: 3000
+        - path: /accountBalance
+          pathType: Prefix
+          backend:
+            service:
+              name: bank-api
+              port:
+                number: 3000
+        - path: /addMoney
+          pathType: Prefix
+          backend:
+            service:
+              name: bank-api
+              port:
+                number: 3000
+        - path: /transferMoney
+          pathType: Prefix
+          backend:
+            service:
+              name: bank-api
+              port:
+                number: 3000

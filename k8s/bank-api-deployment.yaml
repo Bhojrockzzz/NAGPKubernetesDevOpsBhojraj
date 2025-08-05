@@ -5,7 +5,7 @@ metadata:
   labels:
     app: bank-api
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: bank-api
@@ -21,19 +21,27 @@ spec:
             - containerPort: 3000
           env:
             - name: DB_HOST
-              value: bank-db
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_HOST
             - name: DB_USER
               valueFrom:
-                secretKeyRef:
-                  name: postgres-secret
-                  key: POSTGRES_USER
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_USER
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_NAME
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_PORT
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: postgres-secret
                   key: POSTGRES_PASSWORD
-            - name: DB_NAME
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-secret
-                  key: POSTGRES_DB
