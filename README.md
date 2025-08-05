@@ -117,6 +117,6 @@ Once deployed:
   
 
 
-🧑‍💻 Author
-Bhojraj Patil
-GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)
+##🧑‍💻 Author : 
+  Bhojraj Patil
+  GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)
