@@ -26,10 +26,10 @@ Once deployed:
 > **Public Ingress IP**: [http://34.118.237.251](http://34.118.237.251)  -- (This IP may change if Ingress is recreated)
 
 # API Endpoints 
-/healthz : For Health check
-/accountBalance : To Get account balance by ID  
-/addMoney : To Add money to a user account
-/transferMoney : To Transfer money between accounts
+  /healthz : For Health check
+  /accountBalance : To Get account balance by ID  
+  /addMoney : To Add money to a user account
+  /transferMoney : To Transfer money between accounts
 
 # Docker Images
 
