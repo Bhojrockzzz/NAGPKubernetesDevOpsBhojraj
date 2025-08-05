@@ -112,7 +112,12 @@ Once deployed:
      ```bash
      kubectl port-forward svc/bank-api-service 3000:3000
      ```
+## Postman Collection:
+    [Bank API.postman_collection.json](https://github.com/user-attachments/files/21606719/Bank.API.postman_collection.json)
+  
 
-🧑‍💻 Author
-Bhojraj Patil
-GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)
+
+
+## 🧑‍💻 Author : 
+  **Bhojraj Patil**
+  > GitHub: @Bhojrockzzz (https://github.com/Bhojrockzzz)
