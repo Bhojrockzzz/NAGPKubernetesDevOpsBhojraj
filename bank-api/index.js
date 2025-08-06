@@ -74,12 +74,8 @@ app.get('/healthz', (req, res) => {
   res.status(200).send('Bank Services are up and running.');
 });
 
-app.get('/', (req, res) => {
-  res.send("Bank Services are up and running.");
-});
-
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`account-svc running on port ${PORT}`);
+  console.log(`bank-api running on port ${PORT}`);
 });

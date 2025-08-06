@@ -94,6 +94,14 @@ Once deployed:
    - View all running resources:
      ```bash
      kubectl get all
+     kubectl get ingress
+     kubectl get configmaps
+     kubectl get secrets
+     ```
+   - View pods:
+     ```bash
+     kubectl get pods -l app=bank-api
+     kubectl get pods -l app=bank-db
      ```
    - View logs:
      ```bash
@@ -108,9 +116,10 @@ Once deployed:
      ```bash
      kubectl get pvc
      ```
-   - Port-forward a service (for local testing):
+   - PostgreSQL database access:
      ```bash
-     kubectl port-forward svc/bank-api-service 3000:3000
+     kubectl run -i --tty --rm debug --image=postgres:15 -- bash
+     psql -h bank-db -U bankuser -d bank
      ```
 ## Postman Collection:
     [Bank API.postman_collection.json](https://github.com/user-attachments/files/21606719/Bank.API.postman_collection.json)
