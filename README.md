@@ -108,7 +108,7 @@ Once deployed:
      kubectl logs -l app=bank-api
      kubectl logs -l app=bank-db
      ```
-   - Restart a pod:
+   - Delete a pod:
      ```bash
      kubectl delete pod <pod-name>
      ```
