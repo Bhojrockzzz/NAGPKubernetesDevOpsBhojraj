@@ -23,7 +23,7 @@ This project is part of the NAGP Kubernetes & DevOps module. It demonstrates a m
 
 # Access API
 Once deployed:
-> **Public Ingress IP**: [http://34.118.237.251](http://34.118.237.251)  -- (This IP may change if Ingress is recreated)
+> **Public Ingress IP**: <Ingress IP Hosts>  -- (This IP may change if Ingress is recreated)
 
 # API Endpoints 
 - **/healthz**:  
@@ -142,7 +142,7 @@ Once deployed:
      ```
    - Delete all existing Kubernetes objects:
      ```bash
-     Delete all existing Kubernetes objects
+     kubectl delete -f .
      ```
 ## Postman Collection:
     [Bank API.postman_collection.json](https://github.com/user-attachments/files/21606719/Bank.API.postman_collection.json)
