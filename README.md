@@ -121,6 +121,28 @@ Once deployed:
      ```bash
      kubectl run -i --tty --rm debug --image=postgres:15 -- bash
      psql -h bank-db -U bankuser -d bank
+     \dt     -- List all tables
+     \l      -- List all databases
+     \du     -- List roles/users
+     SELECT * from customer;
+     ```
+   - To restart deployment:
+     ```bash
+     kubectl rollout restart deployment <your deployed workload name>
+     ```
+   - To scale deployment replicas:
+     ```bash
+     kubectl scale deployment bank-api --replicas=4
+     kubectl scale deployment bank-db --replicas=1
+     ```
+   - To delete DB deployment:
+     ```bash
+     kubectl delete deployment bank-db
+     kubectl delete deployment bank-api
+     ```
+   - Delete all existing Kubernetes objects:
+     ```bash
+     Delete all existing Kubernetes objects
      ```
 ## Postman Collection:
     [Bank API.postman_collection.json](https://github.com/user-attachments/files/21606719/Bank.API.postman_collection.json)
