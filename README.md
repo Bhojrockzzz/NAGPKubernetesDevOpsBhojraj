@@ -65,6 +65,7 @@ Once deployed:
    **🔹 Google Container Registry (GCR):**
    - From the project root (where `Dockerfile` exists):
      ```bash
+     cd bank-api
      docker build -t gcr.io/banking-k8s-467906/bank-api:latest .
      ```
    - Authenticate with GCP (only first time):
